@@ -1,15 +1,15 @@
 <div align="center">
 
 <!-- Animated Header Banner -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=Komal%20Potdar&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=32&desc=Full%20Stack%20Web%20Developer%20%7C%20Software%20Engineer&descAlignY=55&descAlign=50" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=Pratham%20Taikar&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=32&desc=Full%20Stack%20Web%20Developer%20%7C%20SDE&descAlignY=55&descAlign=50" />
 
 <!-- Profile Views Badge -->
-<img src="https://komarev.com/ghpvc/?username=komalpotdar17&label=Profile%20Views&color=blueviolet&style=for-the-badge" alt="Profile Views" />
-<img src="https://img.shields.io/github/followers/komalpotdar17?label=Followers&style=for-the-badge&color=blueviolet" />
+<img src="https://komarev.com/ghpvc/?username=Pratham-Taikar&label=Profile%20Views&color=blueviolet&style=for-the-badge" alt="Profile Views" />
+<img src="https://img.shields.io/github/followers/Pratham-Taikar?label=Followers&style=for-the-badge&color=blueviolet" />
 
 <!-- Typing SVG -->
 <br/>
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=2500&pause=800&color=8A2BE2&center=true&vCenter=true&width=700&lines=Hey+there!+I'm+Komal+Potdar+👋;Full+Stack+Web+Developer+💻;Java+%26+OOPs+Enthusiast+☕;Open+Source+Contributor+🌐;Always+Learning%2C+Always+Building+🚀" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=2500&pause=800&color=8A2BE2&center=true&vCenter=true&width=700&lines=Hey+there!+I'm+Pratham+Taikar+👋;Full+Stack+Web+Developer+%26+SDE+💻;B.Tech+IT+Student+🎓;Problem+Solver+%26+DSA+Enthusiast+☕;Passionate+about+Scalable+Architecture+🚀" alt="Typing SVG" />
 
 </div>
 
@@ -21,20 +21,20 @@
 ### 🧑‍💻 About Me
 
 ```yaml
-Name       : Komal Potdar
-Role       : Full Stack Web Developer
-Location   : India 📍
+Name       : Pratham Pravin Taikar
+Role       : Full Stack Web Developer / SDE
+Location   : Pune, India 📍
 Languages  : English | Hindi | Marathi
-Learning   : Next.js | System Design
-Interests  : Web Dev | Java | OOPs | DSA
-Contact    : komalpotdar52@gmail.com
+Education  : B.Tech in IT @ VIT Pune (2024-2028)
+Interests  : Web Dev | System Design | DSA
+Contact    : prathamtaikar26@gmail.com
 ```
 
-- 🔭 Currently building full-stack projects with **React + Node.js**
-- 🌱 Leveling up with **Next.js** and **TypeScript**
-- 💡 Passionate about clean code, scalable architecture & great UX
-- 🏆 Active on **LeetCode**, **HackerRank** & **GeeksForGeeks**
-- 💬 Ask me about **Web Development**, **Java**, **OOPs**
+- 🔭 Currently exploring full-stack web development and scalable web applications.
+- 🌱 Leveling up in **Next.js**, **TypeScript**, and backend architecture.
+- 💡 Passionate about clean code, problem-solving, and sharing technical insights.
+- 🏆 Active on **LeetCode** and **GeeksForGeeks**.
+- 💬 Ask me about **Full Stack Dev**, **React**, **Node.js** & **C++**.
 - ⚡ Fun fact: I debug with `console.log` and I'm proud of it 😄
 
 <br clear="right"/>
@@ -46,12 +46,11 @@ Contact    : komalpotdar52@gmail.com
 
 <div align="center">
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/komalpotdar17/)
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:komalpotdar52@gmail.com)
-[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://www.leetcode.com/komalpotdar)
-[![HackerRank](https://img.shields.io/badge/HackerRank-2EC866?style=for-the-badge&logo=hackerrank&logoColor=white)](https://www.hackerrank.com/komalpotdar62)
-[![GeeksForGeeks](https://img.shields.io/badge/GeeksForGeeks-0F9D58?style=for-the-badge&logo=geeksforgeeks&logoColor=white)](https://www.geeksforgeeks.org/user/komalpotdar/)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/komalpotdar17)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pratham-taikar/)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:prathamtaikar26@gmail.com)
+[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/u/frustratedOutcast/)
+[![GeeksForGeeks](https://img.shields.io/badge/GeeksForGeeks-0F9D58?style=for-the-badge&logo=geeksforgeeks&logoColor=white)](https://www.geeksforgeeks.org/profile/pratham15/)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Pratham-Taikar)
 
 </div>
 
@@ -63,25 +62,22 @@ Contact    : komalpotdar52@gmail.com
 ### 🖥️ Languages
 <div align="center">
 
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
 ![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
 </div>
 
 ### ⚛️ Frontend
 <div align="center">
 
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
-![jQuery](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
 
 </div>
 
@@ -90,34 +86,25 @@ Contact    : komalpotdar52@gmail.com
 
 ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 ![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
-![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
-![JSP](https://img.shields.io/badge/JSP-ED8B00?style=for-the-badge&logo=java&logoColor=white)
 
 </div>
 
 ### 🗄️ Databases
 <div align="center">
 
-![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
-![Oracle](https://img.shields.io/badge/Oracle-CC2927?style=for-the-badge&logo=oracle&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
 
 </div>
 
 ### 🛠️ Tools & Platforms
 <div align="center">
 
-![VS Code](https://img.shields.io/badge/VS_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05033?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-121011?style=for-the-badge&logo=github&logoColor=white)
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
-![Eclipse](https://img.shields.io/badge/Eclipse-2C2255?style=for-the-badge&logo=eclipse&logoColor=white)
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
-![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
-![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
+![Cloudinary](https://img.shields.io/badge/Cloudinary-3448C5?style=for-the-badge&logo=cloudinary&logoColor=white)
 
 </div>
 
@@ -128,10 +115,10 @@ Contact    : komalpotdar52@gmail.com
 
 <div align="center">
 
-<img width="49%" src="https://github-readme-stats.vercel.app/api?username=komalpotdar17&show_icons=true&theme=midnight-purple&hide_border=true&count_private=true&include_all_commits=true" />
-<img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=komalpotdar17&theme=midnight-purple&hide_border=true" />
+<img width="49%" src="https://github-readme-stats.vercel.app/api?username=Pratham-Taikar&show_icons=true&theme=midnight-purple&hide_border=true&count_private=true&include_all_commits=true" />
+<img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=Pratham-Taikar&theme=midnight-purple&hide_border=true" />
 
-<img width="40%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=komalpotdar17&layout=compact&theme=midnight-purple&hide_border=true&langs_count=8" />
+<img width="40%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Pratham-Taikar&layout=compact&theme=midnight-purple&hide_border=true&langs_count=8" />
 
 </div>
 
@@ -139,7 +126,7 @@ Contact    : komalpotdar52@gmail.com
 ### 🏆 GitHub Trophies
 <div align="center">
 
-![Trophy](https://github-profile-trophy.vercel.app/?username=komalpotdar17&theme=dracula&no-frame=true&row=1&column=7&margin-w=10)
+![Trophy](https://github-profile-trophy.vercel.app/?username=Pratham-Taikar&theme=dracula&no-frame=true&row=1&column=7&margin-w=10)
 
 </div>
 
@@ -147,7 +134,7 @@ Contact    : komalpotdar52@gmail.com
 ### 📈 Contribution Graph
 <div align="center">
 
-[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=komalpotdar17&bg_color=0d1117&color=9b59b6&line=8a2be2&point=ffffff&area=true&hide_border=true)](https://github.com/komalpotdar17)
+[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=Pratham-Taikar&bg_color=0d1117&color=9b59b6&line=8a2be2&point=ffffff&area=true&hide_border=true)](https://github.com/Pratham-Taikar)
 
 </div>
 
@@ -155,7 +142,7 @@ Contact    : komalpotdar52@gmail.com
 ### 🐍 Contribution Snake
 <div align="center">
 
-![Snake animation](https://github.com/komalpotdar17/komalpotdar17/blob/output/github-contribution-grid-snake-dark.svg)
+![Snake animation](https://github.com/Pratham-Taikar/Pratham-Taikar/blob/output/github-contribution-grid-snake-dark.svg)
 
 </div>
 
