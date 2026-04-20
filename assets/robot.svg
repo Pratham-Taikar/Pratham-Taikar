@@ -1,0 +1,169 @@
+<svg width="420" height="130" viewBox="0 0 420 130" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="metal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8E8E8"/>
+      <stop offset="20%" stop-color="#C0C0C0"/>
+      <stop offset="80%" stop-color="#555555"/>
+      <stop offset="100%" stop-color="#2C2C2C"/>
+    </linearGradient>
+    <linearGradient id="darkMetal" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#444"/>
+      <stop offset="100%" stop-color="#111"/>
+    </linearGradient>
+    <filter id="neonCyan">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    
+    <style>
+      @keyframes walk {
+        0% { transform: translateX(-80px) translateY(25px); }
+        19%, 81% { transform: translateX(180px) translateY(25px); }
+        100% { transform: translateX(-80px) translateY(25px); }
+      }
+      @keyframes bounce {
+        0%, 19%, 81%, 100% { transform: translateY(0); }
+        2%, 6%, 10%, 14%, 18%, 83%, 87%, 91%, 95%, 99% { transform: translateY(-5px); }
+        4%, 8%, 12%, 16%, 85%, 89%, 93%, 97% { transform: translateY(0); }
+      }
+      @keyframes flip {
+        0%, 81% { transform: scaleX(1); }
+        87%, 100% { transform: scaleX(-1); }
+      }
+      @keyframes bubblePop {
+        0%, 35% { opacity: 0; transform: scale(0.5); }
+        40%, 75% { opacity: 1; transform: scale(1); }
+        80%, 100% { opacity: 0; transform: scale(0.8); }
+      }
+      @keyframes eyesShift {
+        0%, 25% { transform: translateX(0); }
+        27%, 30% { transform: translateX(-3px); }
+        35%, 45% { transform: translateX(3px); }
+        47%, 100% { transform: translateX(0); }
+      }
+      @keyframes eyesBlink {
+        0%, 28%, 32%, 58%, 62%, 100% { transform: scaleY(1); }
+        30%, 60% { transform: scaleY(0.1); }
+      }
+      @keyframes wave {
+        0%, 35%, 75%, 100% { transform: rotate(0deg); }
+        40%, 50%, 60%, 70% { transform: rotate(-130deg); }
+        45%, 55%, 65% { transform: rotate(-90deg); }
+      }
+      @keyframes antBlink {
+        0%, 100% { fill: #ff0000; filter: none; }
+        50% { fill: #ff6666; filter: drop-shadow(0 0 3px red); }
+      }
+      @keyframes puff {
+        0% { opacity: 0; transform: translateY(0) scale(0.5); }
+        30% { opacity: 0.5; transform: translateY(-3px) scale(1.2); }
+        60% { opacity: 0; transform: translateY(-8px) scale(1.5); }
+        100% { opacity: 0; }
+      }
+
+      .robot-container { animation: walk 8s cubic-bezier(0.25, 1, 0.5, 1) infinite; }
+      .robot-bounce { animation: bounce 8s linear infinite; }
+      .robot-flip { animation: flip 8s ease-in-out infinite; transform-origin: 15px 0; }
+      .speech-bubble { animation: bubblePop 8s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite; transform-origin: 15px 35px; }
+      .eyes-group { animation: eyesShift 8s infinite; }
+      .eye { animation: eyesBlink 8s infinite; transform-origin: center; }
+      .arm-right { animation: wave 8s infinite; transform-origin: 29px 34px; }
+      .antenna-light { animation: antBlink 1s infinite alternate; }
+      
+      .steam-1 { animation: puff 2s infinite; animation-delay: 0.1s; }
+      .steam-2 { animation: puff 2s infinite; animation-delay: 0.5s; }
+      .steam-3 { animation: puff 2s infinite; animation-delay: 0.9s; }
+
+      .bubble-text { fill: #ffffff; font-family: 'Inter', 'Segoe UI', sans-serif; font-size: 13px; font-weight: 600; }
+      .ambient-line { stroke: #8A2BE2; stroke-width: 1; opacity: 0.3; }
+      .ambient-glow { stroke: #00ffff; stroke-width: 0.5; opacity: 0.1; }
+    </style>
+  </defs>
+
+  <!-- Ambient Ground Line -->
+  <line x1="0" y1="115" x2="420" y2="115" class="ambient-line" />
+  <line x1="0" y1="117" x2="420" y2="117" class="ambient-glow" />
+
+  <!-- Fixed Bubble position matching where robot stops -->
+  <g class="speech-bubble" style="transform: translate(175px, 20px);">
+    <rect x="0" y="0" width="180" height="24" rx="12" fill="#1a0533" stroke="#00ffff" stroke-width="1.5" filter="url(#neonCyan)" opacity="0.3"/>
+    <rect x="0" y="0" width="180" height="24" rx="12" fill="#1a0533" stroke="#8A2BE2" stroke-width="1.5"/>
+    <polygon points="15,22 10,35 25,22" fill="#1a0533" stroke="#8A2BE2" stroke-width="1.5"/>
+    <polygon points="16,21 11,33 24,21" fill="#1a0533" stroke="none" />
+    <text x="12" y="16" class="bubble-text">psst... nice README! 👀</text>
+  </g>
+
+  <g class="robot-container">
+    <g class="robot-flip">
+      <g class="robot-bounce">
+        
+        <!-- Steam trailing behind robot feet -->
+        <g class="steam-group">
+          <circle cx="-5" cy="85" r="4" fill="#a0a0a0" class="steam-1"/>
+          <circle cx="5"  cy="88" r="5" fill="#c0c0c0" class="steam-2"/>
+          <circle cx="-10" cy="86" r="3" fill="#888" class="steam-3"/>
+        </g>
+
+        <!-- Antenna -->
+        <rect x="14" y="-20" width="2" height="20" fill="#888"/>
+        <circle cx="15" cy="-20" r="3" fill="#ff0000" class="antenna-light"/>
+
+        <!-- Left Arm -->
+        <rect x="-2" y="30" width="6" height="18" rx="3" fill="url(#metal)"/>
+
+        <!-- Legs -->
+        <rect x="5" y="65" width="6" height="18" rx="2" fill="url(#metal)"/>
+        <rect x="19" y="65" width="6" height="18" rx="2" fill="url(#metal)"/>
+        <!-- Feet -->
+        <path d="M 2 83 L 13 83 L 11 88 L 2 88 Z" fill="#2C2C2C"/>
+        <path d="M 16 83 L 27 83 L 25 88 L 16 88 Z" fill="#2C2C2C"/>
+        
+        <!-- Body -->
+        <rect x="0" y="25" width="30" height="45" rx="5" fill="url(#metal)" stroke="#2C2C2C" stroke-width="1"/>
+        <line x1="2" y1="32" x2="28" y2="32" stroke="#888" stroke-width="1"/>
+        <line x1="2" y1="63" x2="28" y2="63" stroke="#888" stroke-width="1"/>
+        <!-- Body Rivets -->
+        <circle cx="4" cy="28" r="1.5" fill="#111"/><circle cx="26" cy="28" r="1.5" fill="#111"/>
+        <circle cx="4" cy="66" r="1.5" fill="#111"/><circle cx="26" cy="66" r="1.5" fill="#111"/>
+        
+        <!-- Chest Screen -->
+        <rect x="5" y="40" width="20" height="14" rx="2" fill="url(#darkMetal)"/>
+        <text x="7" y="50" font-family="'Courier New', monospace" font-size="8" fill="#00ffff" filter="url(#neonCyan)">&lt;/&gt;</text>
+        <text x="7" y="50" font-family="'Courier New', monospace" font-size="8" fill="#fff" opacity="0.8">&lt;/&gt;</text>
+        
+        <!-- Right Arm (Wave) -->
+        <g class="arm-right">
+          <circle cx="29" cy="34" r="4" fill="#2C2C2C"/>
+          <rect x="26" y="34" width="6" height="17" rx="2" fill="url(#metal)"/>
+          <path d="M 23 51 L 35 51 L 32 56 L 25 56 Z" fill="#C0C0C0"/>
+        </g>
+
+        <!-- Head -->
+        <rect x="-6" y="0" width="42" height="26" rx="4" fill="url(#metal)" stroke="#2C2C2C" stroke-width="1.5"/>
+        <!-- Face Plate -->
+        <rect x="-1" y="4" width="32" height="18" rx="2" fill="url(#darkMetal)"/>
+        <!-- Head Rivets -->
+        <circle cx="-3" cy="4" r="1.2" fill="#111"/><circle cx="33" cy="4" r="1.2" fill="#111"/>
+        <circle cx="-3" cy="22" r="1.2" fill="#111"/><circle cx="33" cy="22" r="1.2" fill="#111"/>
+        
+        <!-- Eyes Group -->
+        <g class="eyes-group">
+          <!-- Eye 1 -->
+          <circle cx="8" cy="11" r="3.5" fill="#00ffff"/>
+          <circle cx="8" cy="11" r="3.5" fill="#00ffff" class="eye" filter="url(#neonCyan)"/>
+          <!-- Eye 2 -->
+          <circle cx="22" cy="11" r="3.5" fill="#00ffff"/>
+          <circle cx="22" cy="11" r="3.5" fill="#00ffff" class="eye" filter="url(#neonCyan)"/>
+        </g>
+        
+        <!-- Pixel Grin Mouth -->
+        <rect x="9" y="18" width="12" height="1.5" fill="#00ffff" filter="url(#neonCyan)"/>
+        <rect x="8" y="17" width="1.5" height="1.5" fill="#00ffff" filter="url(#neonCyan)"/>
+        <rect x="20" y="17" width="1.5" height="1.5" fill="#00ffff" filter="url(#neonCyan)"/>
+      </g>
+    </g>
+  </g>
+</svg>
