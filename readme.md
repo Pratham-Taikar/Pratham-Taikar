@@ -126,7 +126,7 @@ Contact    : prathamtaikar26@gmail.com
 ### 🏆 GitHub Trophies
 <div align="center">
 
-![Trophy](https://github-profile-trophy.vercel.app/?username=Pratham-Taikar&theme=dracula&no-frame=true&row=1&column=7&margin-w=10)
+[![Trophies](https://github-profile-trophy.vercel.app/?username=pratham-taikar&theme=dracula&no-bg=true&no-frame=true&margin-w=15)](https://github.com/ryo-ma/github-profile-trophy)
 
 </div>
 
