@@ -1,0 +1,56 @@
+<svg width="100%" height="100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100">
+  <defs>
+    <linearGradient id="fbg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   style="stop-color:#0d0221"/>
+      <stop offset="50%"  style="stop-color:#0a0a0a"/>
+      <stop offset="100%" style="stop-color:#1a0533"/>
+    </linearGradient>
+    <filter id="glow2">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .cp { stroke:#8A2BE2; stroke-width:1; fill:none; opacity:0; animation:light 4s ease-in-out infinite; }
+      .cp.d1{animation-delay:0s;} .cp.d2{animation-delay:0.8s;}
+      .cp.d3{animation-delay:1.6s;} .cp.d4{animation-delay:2.4s;} .cp.d5{animation-delay:3.2s;}
+      @keyframes light {
+        0%,100%{opacity:0.05; stroke:#8A2BE2;}
+        50%    {opacity:0.9;  stroke:#00ffff;}
+      }
+      .nd { fill:#8A2BE2; animation:nodeGlow 3s ease-in-out infinite; }
+      @keyframes nodeGlow {
+        0%,100%{fill:#8A2BE2; r:3; opacity:0.4;}
+        50%    {fill:#00ffff; r:5; opacity:1;}
+      }
+      .td { fill:#00ffff; filter:url(#glow2); animation:trav 3s linear infinite; }
+      @keyframes trav { 0%{opacity:0;} 10%{opacity:1;} 90%{opacity:1;} 100%{opacity:0;} }
+      .ft {
+        font-family:'Courier New',monospace; font-size:11px;
+        fill:#8A2BE2; letter-spacing:3px; opacity:0.7; filter:url(#glow2);
+      }
+    </style>
+  </defs>
+  <rect width="1200" height="100" fill="url(#fbg)"/>
+  <rect x="0" y="0" width="1200" height="2" fill="#8A2BE2" opacity="0.6" filter="url(#glow2)"/>
+  <polyline points="0,30 100,30 100,60 200,60"          class="cp d1"/>
+  <polyline points="200,60 300,60 300,30 450,30"         class="cp d2"/>
+  <polyline points="450,30 450,70 600,70 600,30"         class="cp d3"/>
+  <polyline points="600,30 750,30 750,70 900,70"         class="cp d4"/>
+  <polyline points="900,70 900,30 1000,30 1000,60 1200,60" class="cp d5"/>
+  <line x1="0" y1="50" x2="1200" y2="50" stroke="#8A2BE2" stroke-width="0.5" opacity="0.2"/>
+  <circle cx="100"  cy="30" r="3" class="nd" style="animation-delay:0s"/>
+  <circle cx="200"  cy="60" r="3" class="nd" style="animation-delay:0.5s"/>
+  <circle cx="300"  cy="30" r="3" class="nd" style="animation-delay:1s"/>
+  <circle cx="450"  cy="70" r="3" class="nd" style="animation-delay:1.5s"/>
+  <circle cx="600"  cy="30" r="3" class="nd" style="animation-delay:2s"/>
+  <circle cx="750"  cy="70" r="3" class="nd" style="animation-delay:2.5s"/>
+  <circle cx="900"  cy="30" r="3" class="nd" style="animation-delay:3s"/>
+  <circle cx="1000" cy="60" r="3" class="nd" style="animation-delay:3.5s"/>
+  <circle r="3" class="td" style="animation-delay:0s">
+    <animateMotion dur="3s" repeatCount="indefinite" path="M0,50 L1200,50"/>
+  </circle>
+  <circle r="2" class="td" style="animation-delay:1.5s; fill:#8A2BE2">
+    <animateMotion dur="3s" repeatCount="indefinite" path="M1200,50 L0,50"/>
+  </circle>
+  <text x="600" y="92" text-anchor="middle" class="ft">⚡ BUILT WITH PASSION BY PRATHAM TAIKAR ⚡</text>
+</svg>
