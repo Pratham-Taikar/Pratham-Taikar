@@ -1,0 +1,70 @@
+<svg width="420" height="130" viewBox="0 0 420 130" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="metal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8E8E8"/><stop offset="100%" stop-color="#2C2C2C"/>
+    </linearGradient>
+    <linearGradient id="darkMetal" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#444"/><stop offset="100%" stop-color="#111"/>
+    </linearGradient>
+    <filter id="neonRed"><feGaussianBlur stdDeviation="2" result="blur" /><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <style>
+      @keyframes walk { 0% { transform: translateX(-80px) translateY(25px); } 19%, 81% { transform: translateX(180px) translateY(25px); } 100% { transform: translateX(-80px) translateY(25px); } }
+      @keyframes bounce { 0%, 19%, 81%, 100% { transform: translateY(0); } 2%, 10%, 18%, 83%, 91%, 99% { transform: translateY(-5px); } }
+      @keyframes flip { 0%, 81% { transform: scaleX(1); } 87%, 100% { transform: scaleX(-1); } }
+      @keyframes cyberFlash { 0%, 39%, 60%, 100% { fill: #00ffff; } 40%, 59% { fill: #ff003c; } }
+      @keyframes cascade { 0% { transform: translateY(-20px); } 100% { transform: translateY(0px); } }
+      @keyframes codeCube { 0%, 40%, 75%, 100% { opacity: 0; transform: translateY(0) rotate(0deg); } 45%, 70% { opacity: 1; transform: translateY(-30px) rotate(360deg); } }
+
+      .robot-container { animation: walk 8s cubic-bezier(0.25, 1, 0.5, 1) infinite; }
+      .robot-bounce { animation: bounce 8s linear infinite; }
+      .robot-flip { animation: flip 8s ease-in-out infinite; transform-origin: 15px 0; }
+      .eye { animation: cyberFlash 8s infinite; transform-origin: center; }
+      .matrix-scroll { animation: cascade 0.6s linear infinite; }
+      .hologram-cube { animation: codeCube 8s ease-out infinite; transform-origin: 30px 40px; }
+      .bubble-text { fill: #ffffff; font-family: 'Inter', 'Segoe UI', sans-serif; font-size: 13px; font-weight: 600; }
+    </style>
+  </defs>
+
+  <g class="speech-bubble" style="transform: translate(175px, 20px);">
+    <rect x="0" y="0" width="180" height="24" rx="12" fill="#1a0533" stroke="#00ffff" stroke-width="1.5" opacity="0.3"/>
+    <!-- omitted for brevity, reusing eyes to show popup -->
+  </g>
+
+  <g class="robot-container">
+    <g class="robot-flip">
+      <g class="robot-bounce">
+        <!-- Hologram Cube dropping from hand -->
+        <g class="hologram-cube" stroke="#0f0" fill="none" stroke-width="1">
+           <rect x="25" y="35" width="10" height="10"/>
+           <line x1="25" y1="35" x2="28" y2="32"/><line x1="35" y1="35" x2="38" y2="32"/>
+           <line x1="25" y1="45" x2="28" y2="42"/><line x1="35" y1="45" x2="38" y2="42"/>
+           <rect x="28" y="32" width="10" height="10"/>
+        </g>
+        
+        <rect x="5" y="65" width="6" height="18" rx="2" fill="url(#metal)"/>
+        <rect x="19" y="65" width="6" height="18" rx="2" fill="url(#metal)"/>
+        <rect x="0" y="25" width="30" height="45" rx="5" fill="url(#metal)" stroke="#2C2C2C"/>
+        
+        <!-- Screen Matrix -->
+        <clipPath id="mcp"><rect x="5" y="40" width="20" height="14" rx="2"/></clipPath>
+        <rect x="5" y="40" width="20" height="14" rx="2" fill="#000"/>
+        <g clip-path="url(#mcp)">
+          <text x="6" y="46" font-family="monospace" font-size="6" fill="#0f0" class="matrix-scroll">
+            <tspan x="6" dy="0">0101</tspan><tspan x="6" dy="5">1010</tspan>
+            <tspan x="6" dy="5">1101</tspan><tspan x="6" dy="5">0110</tspan>
+            <tspan x="6" dy="5">1110</tspan><tspan x="6" dy="5">0101</tspan>
+            <tspan x="6" dy="5">1010</tspan><tspan x="6" dy="5">1101</tspan>
+          </text>
+        </g>
+        
+        <!-- Arm reaching out to hold cube -->
+        <rect x="26" y="34" width="12" height="6" rx="2" fill="url(#metal)"/>
+        
+        <rect x="-6" y="0" width="42" height="26" rx="4" fill="url(#metal)" stroke="#2C2C2C"/>
+        <rect x="-1" y="4" width="32" height="18" rx="2" fill="url(#darkMetal)"/>
+        <circle cx="8" cy="11" r="3.5" class="eye" filter="url(#neonRed)"/>
+        <circle cx="22" cy="11" r="3.5" class="eye" filter="url(#neonRed)"/>
+      </g>
+    </g>
+  </g>
+</svg>

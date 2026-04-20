@@ -1,0 +1,82 @@
+<svg width="420" height="130" viewBox="0 0 420 130" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="metal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8E8E8"/><stop offset="100%" stop-color="#2C2C2C"/>
+    </linearGradient>
+    <linearGradient id="darkMetal" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#444"/><stop offset="100%" stop-color="#111"/>
+    </linearGradient>
+    <filter id="neonCyan">
+      <feGaussianBlur stdDeviation="2" result="blur" /><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      @keyframes glide { 0% { transform: translateX(-80px) translateY(25px); } 19%, 81% { transform: translateX(180px) translateY(25px); } 100% { transform: translateX(-80px) translateY(25px); } }
+      @keyframes hoverFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+      @keyframes flip { 0%, 81% { transform: scaleX(1); } 87%, 100% { transform: scaleX(-1); } }
+      @keyframes bubblePop { 0%, 35% { opacity: 0; transform: scale(0.5); } 40%, 75% { opacity: 1; transform: scale(1); } 80%, 100% { opacity: 0; transform: scale(0.8); } }
+      @keyframes eyesShift { 0%, 25% { transform: translateX(0); } 27%, 30% { transform: translateX(-3px); } 35%, 45% { transform: translateX(3px); } 47%, 100% { transform: translateX(0); } }
+      @keyframes eyesBlink { 0%, 28%, 32%, 58%, 62%, 100% { transform: scaleY(1); } 30%, 60% { transform: scaleY(0.1); } }
+      @keyframes wave { 0%, 35%, 75%, 100% { transform: rotate(0deg); } 40%, 50%, 60%, 70% { transform: rotate(-130deg); } 45%, 55%, 65% { transform: rotate(-90deg); } }
+      @keyframes exhaust { 0% { opacity: 0.8; transform: translate(0,0) scale(1); } 100% { opacity: 0; transform: translate(-20px, 5px) scale(0.5); } }
+
+      .robot-container { animation: glide 8s ease-in-out infinite; }
+      .robot-float { animation: hoverFloat 3s ease-in-out infinite; }
+      .robot-flip { animation: flip 8s ease-in-out infinite; transform-origin: 15px 0; }
+      .speech-bubble { animation: bubblePop 8s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite; transform-origin: 15px 35px; }
+      .eyes-group { animation: eyesShift 8s infinite; }
+      .eye { animation: eyesBlink 8s infinite; transform-origin: center; }
+      .arm-right { animation: wave 8s infinite; transform-origin: 29px 34px; }
+      .flame-1 { animation: exhaust 0.5s infinite linear; }
+      .flame-2 { animation: exhaust 0.5s infinite linear; animation-delay: 0.25s; }
+      .bubble-text { fill: #ffffff; font-family: 'Inter', 'Segoe UI', sans-serif; font-size: 13px; font-weight: 600; }
+    </style>
+  </defs>
+
+  <line x1="0" y1="115" x2="420" y2="115" stroke="#00ffff" stroke-width="1" opacity="0.3" />
+
+  <!-- Bubble -->
+  <g class="speech-bubble" style="transform: translate(175px, 20px);">
+    <rect x="0" y="0" width="180" height="24" rx="12" fill="#1a0533" stroke="#00ffff" stroke-width="1.5"/>
+    <polygon points="15,22 10,35 25,22" fill="#1a0533" stroke="#00ffff" stroke-width="1.5"/>
+    <polygon points="16,21 11,33 24,21" fill="#1a0533" stroke="none" />
+    <text x="12" y="16" class="bubble-text">psst... nice README! 👀</text>
+  </g>
+
+  <g class="robot-container">
+    <g class="robot-flip">
+      <g class="robot-float">
+        
+        <!-- Hoverboard & Jets -->
+        <g transform="translate(-5, 75)">
+          <path d="M 5 6 L 15 15 L 10 6 Z" fill="#00ffff" filter="url(#neonCyan)" class="flame-1"/>
+          <path d="M 25 6 L 35 15 L 30 6 Z" fill="#00ffff" filter="url(#neonCyan)" class="flame-2"/>
+          <rect x="-4" y="0" width="48" height="6" rx="3" fill="#111" stroke="#00ffff" stroke-width="1.5" filter="url(#neonCyan)"/>
+        </g>
+
+        <!-- Drone Follower -->
+        <g transform="translate(-25, 15)">
+           <circle cx="0" cy="0" r="4" fill="#000" stroke="#00ffff" stroke-width="1" filter="url(#neonCyan)"/>
+           <line x1="0" y1="0" x2="-5" y2="-5" stroke="#00ffff" stroke-width="1"/>
+        </g>
+
+        <!-- Body -->
+        <rect x="-2" y="30" width="6" height="18" rx="3" fill="url(#metal)"/>
+        <rect x="0" y="25" width="30" height="45" rx="5" fill="url(#metal)" stroke="#2C2C2C" stroke-width="1"/>
+        <rect x="5" y="40" width="20" height="14" rx="2" fill="url(#darkMetal)"/>
+        <text x="7" y="50" font-family="'Courier New', monospace" font-size="8" fill="#00ffff" filter="url(#neonCyan)">&lt;/&gt;</text>
+        <g class="arm-right">
+          <circle cx="29" cy="34" r="4" fill="#2C2C2C"/>
+          <rect x="26" y="34" width="6" height="17" rx="2" fill="url(#metal)"/>
+          <path d="M 23 51 L 35 51 L 32 56 L 25 56 Z" fill="#C0C0C0"/>
+        </g>
+        <rect x="-6" y="0" width="42" height="26" rx="4" fill="url(#metal)" stroke="#2C2C2C" stroke-width="1.5"/>
+        <rect x="-1" y="4" width="32" height="18" rx="2" fill="url(#darkMetal)"/>
+        <g class="eyes-group">
+          <circle cx="8" cy="11" r="3.5" fill="#00ffff" class="eye" filter="url(#neonCyan)"/>
+          <circle cx="22" cy="11" r="3.5" fill="#00ffff" class="eye" filter="url(#neonCyan)"/>
+        </g>
+        <rect x="9" y="18" width="12" height="1.5" fill="#00ffff"/>
+      </g>
+    </g>
+  </g>
+</svg>
