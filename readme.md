@@ -7,10 +7,6 @@
 <img src="https://komarev.com/ghpvc/?username=Pratham-Taikar&label=Profile%20Views&color=blueviolet&style=for-the-badge" alt="Profile Views" />
 <img src="https://img.shields.io/github/followers/Pratham-Taikar?label=Followers&style=for-the-badge&color=blueviolet" />
 
-<!-- Typing SVG -->
-<br/>
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=2500&pause=800&color=8A2BE2&center=true&vCenter=true&width=700&lines=Hey+there!+I'm+Pratham+Taikar+👋;Full+Stack+Web+Developer+%26+SDE+💻;B.Tech+IT+Student+🎓;Problem+Solver+%26+DSA+Enthusiast+☕;Passionate+about+Scalable+Architecture+🚀" alt="Typing SVG" />
-
 </div>
 
 ---
