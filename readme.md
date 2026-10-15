@@ -32,12 +32,12 @@ Interests  : Web Dev | System Design | DSA
 Contact    : prathamtaikar26@gmail.com
 ```
 
-- 🔭 Currently exploring full-stack web development and scalable web applications.
-- 🌱 Leveling up in **Next.js**, **TypeScript**, and backend architecture.
-- 💡 Passionate about clean code, problem-solving, and sharing technical insights.
-- 🏆 Active on **LeetCode** and **GeeksForGeeks**.
-- 💬 Ask me about **Full Stack Dev**, **React**, **Node.js** & **C++**.
-- ⚡ Fun fact: I debug with `console.log` and I'm proud of it 😄
+- Currently exploring full-stack web development and scalable web applications.
+- Leveling up in **Next.js**, **TypeScript**, and backend architecture.
+- Passionate about clean code, problem-solving, and sharing technical insights.
+- Active on **LeetCode** and **GeeksForGeeks**.
+- Ask me about **Full Stack Dev**, **React**, **Node.js** & **C++**.
+- Fun fact: I debug with `console.log` and I'm proud of it 😄
 
 <br clear="right"/>
 
