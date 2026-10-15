@@ -1,91 +1,415 @@
-<svg width="420" height="130" viewBox="0 0 420 130" xmlns="http://www.w3.org/2000/svg">
+<svg width="100%" height="320" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320">
   <defs>
-    <linearGradient id="metal" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#E8E8E8"/><stop offset="20%" stop-color="#C0C0C0"/>
-      <stop offset="80%" stop-color="#555555"/><stop offset="100%" stop-color="#2C2C2C"/>
+    <!-- Background Gradient -->
+    <linearGradient id="cyberBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d0221"/>
+      <stop offset="50%" stop-color="#070114"/>
+      <stop offset="100%" stop-color="#1a0533"/>
     </linearGradient>
-    <linearGradient id="darkMetal" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#444"/><stop offset="100%" stop-color="#111"/>
+
+    <!-- Metal Gradients -->
+    <linearGradient id="mechaMetal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a1b4e"/>
+      <stop offset="50%" stop-color="#160e29"/>
+      <stop offset="100%" stop-color="#0a0515"/>
     </linearGradient>
-    <filter id="neonCyan">
-      <feGaussianBlur stdDeviation="2" result="blur" /><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+
+    <linearGradient id="cyanGlowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00ffff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#8A2BE2" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <linearGradient id="hudGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a0533" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#0d0221" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="neonGlowCyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
     </filter>
+
+    <filter id="neonGlowPurple" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
     <style>
-      @keyframes walk { 0% { transform: translateX(-80px) translateY(25px); } 19%, 81% { transform: translateX(180px) translateY(25px); } 100% { transform: translateX(-80px) translateY(25px); } }
-      @keyframes bounce { 0%, 19%, 81%, 100% { transform: translateY(0); } 2%, 6%, 10%, 14%, 18%, 83%, 87%, 91%, 95%, 99% { transform: translateY(-5px); } 4%, 8%, 12%, 16%, 85%, 89%, 93%, 97% { transform: translateY(0); } }
-      @keyframes flip { 0%, 81% { transform: scaleX(1); } 87%, 100% { transform: scaleX(-1); } }
-      @keyframes bubblePop { 0%, 35% { opacity: 0; transform: scale(0.5); } 40%, 75% { opacity: 1; transform: scale(1); } 80%, 100% { opacity: 0; transform: scale(0.8); } }
-      @keyframes eyesShift { 0%, 25% { transform: translateX(0); } 27%, 30% { transform: translateX(-3px); } 35%, 45% { transform: translateX(3px); } 47%, 100% { transform: translateX(0); } }
-      @keyframes eyesBlink { 0%, 28%, 32%, 58%, 62%, 100% { transform: scaleY(1); } 30%, 60% { transform: scaleY(0.1); } }
-      @keyframes wave { 0%, 35%, 75%, 100% { transform: rotate(0deg); } 40%, 50%, 60%, 70% { transform: rotate(-130deg); } 45%, 55%, 65% { transform: rotate(-90deg); } }
-      @keyframes shadowPulse { 0%, 19%, 81%, 100% { transform: scale(1); opacity: 0.8; } 2%, 6%, 10%, 14%, 18%, 83%, 87%, 91%, 95%, 99% { transform: scale(0.8); opacity: 0.3; } }
+      @keyframes typeHandL {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-3px); }
+      }
+      @keyframes typeHandR {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(3px); }
+      }
+      @keyframes eyeBlink {
+        0%, 46%, 50%, 96%, 100% { transform: scaleY(1); }
+        48%, 98% { transform: scaleY(0.1); }
+      }
+      @keyframes eyeScan {
+        0%, 100% { transform: translateX(0px); }
+        30% { transform: translateX(-4px); }
+        70% { transform: translateX(4px); }
+      }
+      @keyframes visorGleam {
+        0% { transform: translateX(-60px); opacity: 0; }
+        30% { opacity: 0.7; }
+        60% { transform: translateX(60px); opacity: 0; }
+        100% { opacity: 0; }
+      }
+      @keyframes corePulse {
+        0%, 100% { transform: scale(1); opacity: 0.8; }
+        50% { transform: scale(1.15); opacity: 1; filter: drop-shadow(0 0 6px #00ffff); }
+      }
+      @keyframes scanBeam {
+        0% { transform: translateY(-10px); opacity: 0; }
+        50% { opacity: 0.35; }
+        100% { transform: translateY(210px); opacity: 0; }
+      }
+      @keyframes cursorBlink {
+        0%, 49% { opacity: 1; }
+        50%, 100% { opacity: 0; }
+      }
+      @keyframes keyPulse {
+        0%, 100% { opacity: 0.3; }
+        50% { opacity: 0.95; fill: #00ffff; }
+      }
+      @keyframes starTwinkle {
+        0%, 100% { opacity: 0.2; }
+        50% { opacity: 1; }
+      }
+      @keyframes packetTravel {
+        0% { stroke-dashoffset: 120; }
+        100% { stroke-dashoffset: 0; }
+      }
+
+      .hand-left { animation: typeHandL 1.2s ease-in-out infinite; }
+      .hand-right { animation: typeHandR 1.1s ease-in-out infinite 0.2s; }
+      .eyes-blink { animation: eyeBlink 5s infinite; transform-origin: 0px 109px; }
+      .eyes-scan { animation: eyeScan 4s ease-in-out infinite; }
+      .visor-gleam { animation: visorGleam 4s ease-in-out infinite; }
+      .core-pulse { animation: corePulse 2s ease-in-out infinite; transform-origin: center; }
+      .scanner { animation: scanBeam 3.5s linear infinite; }
+      .cursor { animation: cursorBlink 0.9s infinite; }
       
-      .robot-container { animation: walk 8s cubic-bezier(0.25, 1, 0.5, 1) infinite; }
-      .robot-bounce { animation: bounce 8s linear infinite; }
-      .robot-flip { animation: flip 8s ease-in-out infinite; transform-origin: 15px 0; }
-      .speech-bubble { animation: bubblePop 8s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite; transform-origin: 15px 35px; }
-      .eyes-group { animation: eyesShift 8s infinite; }
-      .eye { animation: eyesBlink 8s infinite; transform-origin: center; }
-      .arm-right { animation: wave 8s infinite; transform-origin: 29px 34px; }
-      .shadow { animation: shadowPulse 8s linear infinite; transform-origin: center; }
-      .bubble-text { fill: #ffffff; font-family: 'Inter', 'Segoe UI', sans-serif; font-size: 13px; font-weight: 600; }
+      .key1 { animation: keyPulse 1.4s infinite 0.1s; }
+      .key2 { animation: keyPulse 1.6s infinite 0.4s; }
+      .key3 { animation: keyPulse 1.2s infinite 0.7s; }
+      .key4 { animation: keyPulse 1.5s infinite 0.2s; }
+
+      .twinkle-1 { animation: starTwinkle 2.5s infinite; }
+      .twinkle-2 { animation: starTwinkle 3.2s infinite 1s; }
+      .twinkle-3 { animation: starTwinkle 2s infinite 1.5s; }
+
+      .wire-packet {
+        stroke-dasharray: 20, 100;
+        animation: packetTravel 2.5s linear infinite;
+      }
+
+      /* Fonts */
+      .code-font { font-family: 'Courier New', 'Consolas', monospace; }
+      .ui-font { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
     </style>
   </defs>
 
-  <!-- Tron Grid -->
-  <g stroke="#ff00ff" stroke-width="1.5" opacity="0.3">
-    <line x1="0" y1="110" x2="420" y2="110"/>
-    <line x1="0" y1="120" x2="420" y2="120"/>
-    <line x1="0" y1="130" x2="420" y2="130"/>
-    <path d="M60 130 L100 110 M110 130 L140 110 M160 130 L180 110 M210 130 L220 110 M260 130 L260 110 M310 130 L300 110 M360 130 L340 110 M410 130 L380 110" />
-    <path d="M10 130 L60 110 M-40 130 L20 110" />
+  <!-- Canvas Background -->
+  <rect width="1200" height="320" fill="url(#cyberBg)"/>
+
+  <!-- Top Accent Border -->
+  <line x1="0" y1="1" x2="1200" y2="1" stroke="#8A2BE2" stroke-width="1.5" opacity="0.4" filter="url(#neonGlowPurple)"/>
+
+  <!-- Background Stars / Cyber Dust -->
+  <g fill="#8A2BE2">
+    <circle cx="120" cy="45" r="1.5" class="twinkle-1" fill="#00ffff"/>
+    <circle cx="280" cy="85" r="1.2" class="twinkle-2"/>
+    <circle cx="450" cy="30" r="1.8" class="twinkle-3" fill="#00ffff"/>
+    <circle cx="750" cy="50" r="1.5" class="twinkle-1"/>
+    <circle cx="920" cy="70" r="1.2" class="twinkle-3" fill="#00ffff"/>
+    <circle cx="1110" cy="35" r="1.6" class="twinkle-2"/>
+    <circle cx="30" cy="190" r="1.2" class="twinkle-3"/>
+    <circle cx="1170" cy="180" r="1.4" class="twinkle-1" fill="#00ffff"/>
   </g>
 
-  <!-- Bubble -->
-  <g class="speech-bubble" style="transform: translate(175px, 20px);">
-    <rect x="0" y="0" width="180" height="24" rx="12" fill="#1a0533" stroke="#00ffff" stroke-width="1.5" filter="url(#neonCyan)" opacity="0.3"/>
-    <rect x="0" y="0" width="180" height="24" rx="12" fill="#1a0533" stroke="#ff00ff" stroke-width="1.5"/>
-    <polygon points="15,22 10,35 25,22" fill="#1a0533" stroke="#ff00ff" stroke-width="1.5"/>
-    <polygon points="16,21 11,33 24,21" fill="#1a0533" stroke="none" />
-    <text x="12" y="16" class="bubble-text">psst... nice README! 👀</text>
+  <!-- Circuit Stream Lines across background -->
+  <g stroke="#8A2BE2" stroke-width="1" fill="none" opacity="0.25">
+    <path d="M 0 80 L 180 80 L 220 120 L 300 120" />
+    <path d="M 1200 70 L 1020 70 L 980 110 L 900 110" />
+    <path d="M 20 260 L 140 260 L 180 220" />
+    <path d="M 1180 260 L 1060 260 L 1020 220" />
   </g>
 
-  <g class="robot-container">
-    <ellipse cx="14" cy="88" rx="15" ry="3" fill="#000" class="shadow"/>
-    <g class="robot-flip">
-      <g class="robot-bounce">
-        <!-- Robot Parts -->
-        <rect x="14" y="-20" width="2" height="20" fill="#888"/>
-        <circle cx="15" cy="-20" r="3" fill="#00ffff" filter="url(#neonCyan)"/>
-        <rect x="-2" y="30" width="6" height="18" rx="3" fill="url(#metal)"/>
-        <!-- Legs -->
-        <rect x="5" y="65" width="6" height="18" rx="2" fill="url(#metal)"/>
-        <rect x="19" y="65" width="6" height="18" rx="2" fill="url(#metal)"/>
-        <path d="M 2 83 L 13 83 L 11 88 L 2 88 Z" fill="#2C2C2C"/>
-        <path d="M 16 83 L 27 83 L 25 88 L 16 88 Z" fill="#2C2C2C"/>
-        <!-- Body -->
-        <rect x="0" y="25" width="30" height="45" rx="5" fill="url(#metal)" stroke="#2C2C2C" stroke-width="1"/>
-        <line x1="2" y1="32" x2="28" y2="32" stroke="#888" stroke-width="1"/>
-        <line x1="2" y1="63" x2="28" y2="63" stroke="#888" stroke-width="1"/>
-        <!-- Chest Screen -->
-        <rect x="5" y="40" width="20" height="14" rx="2" fill="url(#darkMetal)"/>
-        <text x="7" y="50" font-family="'Courier New', monospace" font-size="8" fill="#ff00ff" filter="url(#neonCyan)">&lt;/&gt;</text>
-        <text x="7" y="50" font-family="'Courier New', monospace" font-size="8" fill="#fff" opacity="0.8">&lt;/&gt;</text>
-        <!-- Arm -->
-        <g class="arm-right">
-          <circle cx="29" cy="34" r="4" fill="#2C2C2C"/>
-          <rect x="26" y="34" width="6" height="17" rx="2" fill="url(#metal)"/>
-          <path d="M 23 51 L 35 51 L 32 56 L 25 56 Z" fill="#C0C0C0"/>
-        </g>
-        <!-- Head -->
-        <rect x="-6" y="0" width="42" height="26" rx="4" fill="url(#metal)" stroke="#2C2C2C" stroke-width="1.5"/>
-        <rect x="-1" y="4" width="32" height="18" rx="2" fill="url(#darkMetal)"/>
-        <g class="eyes-group">
-          <circle cx="8" cy="11" r="3.5" fill="#ff00ff" class="eye" filter="url(#neonCyan)"/>
-          <circle cx="22" cy="11" r="3.5" fill="#ff00ff" class="eye" filter="url(#neonCyan)"/>
-        </g>
-        <rect x="9" y="18" width="12" height="1.5" fill="#ff00ff" filter="url(#neonCyan)"/>
+  <!-- Circuit Flowing Packets -->
+  <g stroke="#00ffff" stroke-width="1.5" fill="none" opacity="0.6">
+    <path d="M 0 80 L 180 80 L 220 120 L 300 120" class="wire-packet" />
+    <path d="M 1200 70 L 1020 70 L 980 110 L 900 110" class="wire-packet" style="animation-delay: 1.2s;" />
+  </g>
+
+  <!-- ═════════════════ SYNTHWAVE / TRON GRID FLOOR ═════════════════ -->
+  <g opacity="0.45">
+    <!-- Horizon Glow -->
+    <line x1="80" y1="230" x2="1120" y2="230" stroke="#00ffff" stroke-width="1" filter="url(#neonGlowCyan)"/>
+    <line x1="0" y1="230" x2="1200" y2="230" stroke="#8A2BE2" stroke-width="1"/>
+    
+    <!-- Transverse Grid Lines with Perspective Spacing -->
+    <line x1="0" y1="238" x2="1200" y2="238" stroke="#8A2BE2" stroke-width="0.7"/>
+    <line x1="0" y1="250" x2="1200" y2="250" stroke="#8A2BE2" stroke-width="0.9"/>
+    <line x1="0" y1="267" x2="1200" y2="267" stroke="#8A2BE2" stroke-width="1.1"/>
+    <line x1="0" y1="290" x2="1200" y2="290" stroke="#00ffff" stroke-width="1.3" opacity="0.6"/>
+    <line x1="0" y1="318" x2="1200" y2="318" stroke="#00ffff" stroke-width="1.6"/>
+
+    <!-- Perspective Lines converging to Vanishing Point (600, 230) -->
+    <line x1="600" y1="230" x2="40"   y2="320" stroke="#8A2BE2" stroke-width="1"/>
+    <line x1="600" y1="230" x2="160"  y2="320" stroke="#8A2BE2" stroke-width="1"/>
+    <line x1="600" y1="230" x2="280"  y2="320" stroke="#8A2BE2" stroke-width="1"/>
+    <line x1="600" y1="230" x2="400"  y2="320" stroke="#8A2BE2" stroke-width="1"/>
+    <line x1="600" y1="230" x2="510"  y2="320" stroke="#00ffff" stroke-width="1.2"/>
+    <line x1="600" y1="230" x2="690"  y2="320" stroke="#00ffff" stroke-width="1.2"/>
+    <line x1="600" y1="230" x2="800"  y2="320" stroke="#8A2BE2" stroke-width="1"/>
+    <line x1="600" y1="230" x2="920"  y2="320" stroke="#8A2BE2" stroke-width="1"/>
+    <line x1="600" y1="230" x2="1040" y2="320" stroke="#8A2BE2" stroke-width="1"/>
+    <line x1="600" y1="230" x2="1160" y2="320" stroke="#8A2BE2" stroke-width="1"/>
+  </g>
+
+  <!-- ═════════════════ LEFT HUD PANEL: CODE TERMINAL ═════════════════ -->
+  <g transform="translate(45, 35)">
+    <!-- Glow Backdrop -->
+    <rect x="0" y="0" width="350" height="205" rx="10" fill="url(#hudGlass)" stroke="#8A2BE2" stroke-width="1.5" filter="url(#neonGlowPurple)" opacity="0.3"/>
+    <!-- Main Card Body -->
+    <rect x="0" y="0" width="350" height="205" rx="10" fill="url(#hudGlass)" stroke="#8A2BE2" stroke-width="1.5"/>
+    <rect x="0" y="0" width="350" height="28" rx="10" fill="#220745" stroke="#8A2BE2" stroke-width="1"/>
+    <rect x="0" y="18" width="350" height="10" fill="#220745"/>
+    
+    <!-- Window Controls -->
+    <circle cx="16" cy="14" r="4" fill="#ff5f56"/>
+    <circle cx="28" cy="14" r="4" fill="#ffbd2e"/>
+    <circle cx="40" cy="14" r="4" fill="#27c93f"/>
+    
+    <!-- Window Title -->
+    <text x="175" y="18" text-anchor="middle" class="code-font" font-size="11" font-weight="bold" fill="#00ffff" letter-spacing="1">💻 TERMINAL // dev_core.ts</text>
+
+    <!-- Scanline effect across card -->
+    <rect x="2" y="30" width="346" height="4" fill="#00ffff" opacity="0.08" class="scanner"/>
+
+    <!-- Code Content -->
+    <g class="code-font" font-size="10.5" transform="translate(16, 48)">
+      <text y="0">
+        <tspan fill="#ff007f">const </tspan><tspan fill="#00ffff">engineer</tspan><tspan fill="#fff"> = </tspan><tspan fill="#a78bfa">"Pratham Taikar"</tspan><tspan fill="#fff">;</tspan>
+      </text>
+      <text y="21">
+        <tspan fill="#ff007f">const </tspan><tspan fill="#00ffff">role</tspan><tspan fill="#fff"> = </tspan><tspan fill="#facc15">"Full Stack Dev / SDE"</tspan><tspan fill="#fff">;</tspan>
+      </text>
+      <text y="42">
+        <tspan fill="#ff007f">const </tspan><tspan fill="#00ffff">skills</tspan><tspan fill="#fff"> = [</tspan><tspan fill="#38bdf8">"Next.js"</tspan><tspan fill="#fff">, </tspan><tspan fill="#38bdf8">"TS"</tspan><tspan fill="#fff">, </tspan><tspan fill="#38bdf8">"React"</tspan><tspan fill="#fff">, </tspan><tspan fill="#38bdf8">"Node"</tspan><tspan fill="#fff">];</tspan>
+      </text>
+      <text y="63">
+        <tspan fill="#ff007f">const </tspan><tspan fill="#00ffff">dsaSolved</tspan><tspan fill="#fff"> = </tspan><tspan fill="#4ade80">419</tspan><tspan fill="#fff">; </tspan><tspan fill="#64748b">// Top 24% LeetCode</tspan>
+      </text>
+      <text y="84">
+        <tspan fill="#00ffff">engineer</tspan><tspan fill="#fff">.</tspan><tspan fill="#f43f5e">buildFuture</tspan><tspan fill="#fff">({ </tspan><tspan fill="#a78bfa">passion</tspan><tspan fill="#fff">: </tspan><tspan fill="#4ade80">Infinity</tspan><tspan fill="#fff"> });</tspan>
+      </text>
+      <!-- Line 6 / Output -->
+      <g transform="translate(0, 110)">
+        <rect x="-4" y="-12" width="322" height="25" rx="4" fill="#0d0221" stroke="#00ffff" stroke-width="0.8" opacity="0.85"/>
+        <text x="6" y="4" fill="#00ffff" font-weight="bold">> READY TO COLLABORATE <tspan fill="#ff007f">⚡</tspan></text>
+        <rect x="225" y="-7" width="6" height="12" fill="#00ffff" class="cursor"/>
       </g>
     </g>
   </g>
+
+  <!-- ═════════════════ RIGHT HUD PANEL: METRICS & TELEMETRY ═════════════════ -->
+  <g transform="translate(805, 35)">
+    <!-- Glow Backdrop -->
+    <rect x="0" y="0" width="350" height="205" rx="10" fill="url(#hudGlass)" stroke="#00ffff" stroke-width="1.5" filter="url(#neonGlowCyan)" opacity="0.3"/>
+    <!-- Main Card Body -->
+    <rect x="0" y="0" width="350" height="205" rx="10" fill="url(#hudGlass)" stroke="#00ffff" stroke-width="1.5"/>
+    <rect x="0" y="0" width="350" height="28" rx="10" fill="#0d1b38" stroke="#00ffff" stroke-width="1"/>
+    <rect x="0" y="18" width="350" height="10" fill="#0d1b38"/>
+
+    <!-- Pulse LED Indicator -->
+    <circle cx="16" cy="14" r="4" fill="#00ffff" filter="url(#neonGlowCyan)"/>
+    <text x="28" y="18" class="ui-font" font-size="10.5" font-weight="bold" fill="#00ffff" letter-spacing="1">LIVE TELEMETRY // VIT PUNE</text>
+    
+    <!-- Rotating Hologram Wireframe Cube Icon in Top-Right -->
+    <g transform="translate(325, 14)">
+      <g>
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="12s" repeatCount="indefinite"/>
+        <polygon points="0,-8 7,-4 7,4 0,0" stroke="#00ffff" stroke-width="0.8" fill="none"/>
+        <polygon points="0,-8 -7,-4 -7,4 0,0" stroke="#8A2BE2" stroke-width="0.8" fill="none"/>
+        <polygon points="0,-8 7,-4 0,0 -7,-4" stroke="#ff007f" stroke-width="0.8" fill="none"/>
+      </g>
+    </g>
+
+    <g class="ui-font" transform="translate(16, 48)">
+      <!-- Metric 1: System Readiness -->
+      <text y="0" font-size="10.5" font-weight="bold" fill="#ffffff">SYSTEM ARCHITECTURE</text>
+      <text x="318" y="0" text-anchor="end" font-size="10.5" font-weight="bold" fill="#00ffff" class="code-font">OPTIMIZED</text>
+      <!-- Progress Bar 1 -->
+      <rect x="0" y="7" width="318" height="7" rx="3.5" fill="#13082b" stroke="#8A2BE2" stroke-width="0.8"/>
+      <rect x="1" y="8" width="286" height="5" rx="2.5" fill="url(#cyanGlowGrad)"/>
+
+      <!-- Metric 2: Problem Solving & DSA -->
+      <text y="39" font-size="10.5" font-weight="bold" fill="#ffffff">ALGORITHMS &amp; DSA</text>
+      <text x="318" y="39" text-anchor="end" font-size="10.5" font-weight="bold" fill="#ff007f" class="code-font">419+ SOLVED</text>
+      <!-- Progress Bar 2 -->
+      <rect x="0" y="46" width="318" height="7" rx="3.5" fill="#13082b" stroke="#8A2BE2" stroke-width="0.8"/>
+      <rect x="1" y="47" width="268" height="5" rx="2.5" fill="url(#cyanGlowGrad)"/>
+
+      <!-- Metric 3: Contest Rating -->
+      <text y="78" font-size="10.5" font-weight="bold" fill="#ffffff">LEETCODE CONTEST RATING</text>
+      <text x="318" y="78" text-anchor="end" font-size="10.5" font-weight="bold" fill="#facc15" class="code-font">1604 (TOP 24%)</text>
+      <!-- Progress Bar 3 -->
+      <rect x="0" y="85" width="318" height="7" rx="3.5" fill="#13082b" stroke="#8A2BE2" stroke-width="0.8"/>
+      <rect x="1" y="86" width="240" height="5" rx="2.5" fill="url(#cyanGlowGrad)"/>
+
+      <!-- Status Footer Badge -->
+      <g transform="translate(0, 110)">
+        <rect x="0" y="-10" width="318" height="24" rx="5" fill="#091b29" stroke="#00ffff" stroke-width="1"/>
+        <circle cx="12" cy="2" r="3" fill="#00ffff" class="cursor"/>
+        <text x="22" y="6" font-size="9.5" font-weight="bold" fill="#00ffff" class="code-font">STATUS: EXPLORING SCALABLE FULL-STACK</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ═════════════════ CENTER HERO: CYBER MECHA ROBOT CODER ═════════════════ -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 0; 0 -7; 0 0" dur="4.5s" repeatCount="indefinite"/>
+    
+    <!-- Holographic Desk / Console -->
+    <g transform="translate(480, 220)">
+      <!-- Console Base Shadow -->
+      <ellipse cx="120" cy="45" rx="140" ry="15" fill="#000000" opacity="0.6"/>
+      <!-- Console Tabletop -->
+      <polygon points="5,35 235,35 210,58 30,58" fill="#120626" stroke="#8A2BE2" stroke-width="1.5"/>
+      <polygon points="18,37 222,37 202,55 38,55" fill="#1e0b3d" stroke="#00ffff" stroke-width="0.8" opacity="0.7"/>
+
+      <!-- Holographic Keyboard Keys -->
+      <g stroke="#00ffff" stroke-width="0.8" fill="#0d0221">
+        <rect x="45" y="41" width="12" height="5" rx="1" class="key1"/>
+        <rect x="61" y="41" width="12" height="5" rx="1" class="key2"/>
+        <rect x="77" y="41" width="12" height="5" rx="1" class="key3"/>
+        <rect x="93" y="41" width="12" height="5" rx="1" class="key4"/>
+        <rect x="109" y="41" width="12" height="5" rx="1" class="key1"/>
+        <rect x="125" y="41" width="12" height="5" rx="1" class="key2"/>
+        <rect x="141" y="41" width="12" height="5" rx="1" class="key3"/>
+        <rect x="157" y="41" width="12" height="5" rx="1" class="key4"/>
+        <rect x="173" y="41" width="16" height="5" rx="1" class="key1"/>
+        
+        <!-- Row 2 -->
+        <rect x="52" y="48" width="14" height="5" rx="1" class="key3"/>
+        <rect x="70" y="48" width="14" height="5" rx="1" class="key1"/>
+        <rect x="88" y="48" width="58" height="5" rx="1" class="key4"/> <!-- Spacebar -->
+        <rect x="150" y="48" width="14" height="5" rx="1" class="key2"/>
+        <rect x="168" y="48" width="14" height="5" rx="1" class="key3"/>
+      </g>
+
+      <!-- Center Code Hologram radiating up from keyboard -->
+      <text x="120" y="24" text-anchor="middle" class="code-font" font-size="13" font-weight="bold" fill="#00ffff" filter="url(#neonGlowCyan)">&lt;/&gt;</text>
+      <line x1="80" y1="35" x2="110" y2="28" stroke="#00ffff" stroke-width="0.8" opacity="0.6"/>
+      <line x1="160" y1="35" x2="130" y2="28" stroke="#00ffff" stroke-width="0.8" opacity="0.6"/>
+    </g>
+
+    <!-- Robot Body Elements centered at X=600 -->
+    <g transform="translate(600, 0)">
+      
+      <!-- Antenna with Pulsing Beacon -->
+      <line x1="0" y1="78" x2="0" y2="58" stroke="#8A2BE2" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="0" cy="54" r="4.5" fill="#00ffff" filter="url(#neonGlowCyan)"/>
+      <circle cx="0" cy="54" r="8" fill="none" stroke="#00ffff" stroke-width="0.8" opacity="0.5" class="core-pulse"/>
+
+      <!-- Mecha Head Chassis -->
+      <!-- Ears / Audio Sensors -->
+      <rect x="-48" y="94" width="8" height="24" rx="3" fill="#1b0e36" stroke="#8A2BE2" stroke-width="1.5"/>
+      <rect x="40" y="94" width="8" height="24" rx="3" fill="#1b0e36" stroke="#8A2BE2" stroke-width="1.5"/>
+      <line x1="-44" y1="100" x2="-44" y2="112" stroke="#00ffff" stroke-width="1.5"/>
+      <line x1="44" y1="100" x2="44" y2="112" stroke="#00ffff" stroke-width="1.5"/>
+
+      <!-- Helmet Shell -->
+      <rect x="-42" y="78" width="84" height="58" rx="16" fill="url(#mechaMetal)" stroke="#8A2BE2" stroke-width="2"/>
+      <!-- Brow Armor Plate -->
+      <path d="M -36 88 L 36 88 L 28 80 L -28 80 Z" fill="#2a144e" stroke="#00ffff" stroke-width="0.8"/>
+
+      <!-- Visor Housing -->
+      <rect x="-34" y="94" width="68" height="30" rx="8" fill="#080214" stroke="#00ffff" stroke-width="1.5"/>
+      
+      <!-- Inside Visor: Glowing HUD Eyes -->
+      <g class="eyes-blink">
+        <g class="eyes-scan">
+          <!-- Left Eye -->
+          <ellipse cx="-14" cy="109" rx="9" ry="6" fill="#00ffff" filter="url(#neonGlowCyan)"/>
+          <ellipse cx="-14" cy="109" rx="5" ry="3.5" fill="#ffffff"/>
+          <!-- Right Eye -->
+          <ellipse cx="14" cy="109" rx="9" ry="6" fill="#00ffff" filter="url(#neonGlowCyan)"/>
+          <ellipse cx="14" cy="109" rx="5" ry="3.5" fill="#ffffff"/>
+        </g>
+      </g>
+      
+      <!-- Visor Gleam Reflection sweep -->
+      <line x1="-20" y1="96" x2="-8" y2="122" stroke="#ffffff" stroke-width="2" stroke-linecap="round" class="visor-gleam"/>
+
+      <!-- Neck Joint -->
+      <rect x="-14" y="136" width="28" height="10" rx="2" fill="#160e29" stroke="#8A2BE2" stroke-width="1"/>
+      <line x1="-10" y1="140" x2="10" y2="140" stroke="#00ffff" stroke-width="1" opacity="0.6"/>
+
+      <!-- Mecha Torso / Chest Armor -->
+      <!-- Shoulders -->
+      <polygon points="-58,153 -30,146 -26,173 -52,183" fill="#241142" stroke="#8A2BE2" stroke-width="1.5"/>
+      <polygon points="58,153 30,146 26,173 52,183" fill="#241142" stroke="#8A2BE2" stroke-width="1.5"/>
+      <line x1="-50" y1="158" x2="-35" y2="153" stroke="#00ffff" stroke-width="1.2"/>
+      <line x1="50" y1="158" x2="35" y2="153" stroke="#00ffff" stroke-width="1.2"/>
+
+      <!-- Main Torso Block -->
+      <path d="M -32 146 L 32 146 L 24 213 L -24 213 Z" fill="url(#mechaMetal)" stroke="#8A2BE2" stroke-width="2"/>
+      
+      <!-- Chest Arc Reactor Core -->
+      <circle cx="0" cy="176" r="16" fill="#0a031a" stroke="#8A2BE2" stroke-width="1.5"/>
+      <circle cx="0" cy="176" r="11" fill="#13082e" stroke="#00ffff" stroke-width="1.2"/>
+      <circle cx="0" cy="176" r="6" fill="#00ffff" class="core-pulse" filter="url(#neonGlowCyan)"/>
+      <circle cx="0" cy="176" r="2.5" fill="#ffffff"/>
+
+      <!-- Chest Circuit Traces -->
+      <line x1="-24" y1="160" x2="-14" y2="170" stroke="#00ffff" stroke-width="1" opacity="0.7"/>
+      <line x1="24" y1="160" x2="14" y2="170" stroke="#00ffff" stroke-width="1" opacity="0.7"/>
+      <line x1="-16" y1="190" x2="-8" y2="202" stroke="#ff007f" stroke-width="1" opacity="0.7"/>
+      <line x1="16" y1="190" x2="8" y2="202" stroke="#ff007f" stroke-width="1" opacity="0.7"/>
+
+      <!-- Mecha Arms & Hands at Keyboard -->
+      <!-- Left Arm -->
+      <g class="hand-left">
+        <rect x="-48" y="170" width="14" height="28" rx="5" fill="#1d0c38" stroke="#8A2BE2" stroke-width="1.2"/>
+        <polygon points="-46,196 -26,220 -16,216 -36,192" fill="#160829" stroke="#8A2BE2" stroke-width="1.2"/>
+        <circle cx="-20" cy="220" r="5" fill="#00ffff" filter="url(#neonGlowCyan)"/>
+        <rect x="-26" y="220" width="10" height="4" rx="2" fill="#ffffff"/>
+      </g>
+
+      <!-- Right Arm -->
+      <g class="hand-right">
+        <rect x="34" y="170" width="14" height="28" rx="5" fill="#1d0c38" stroke="#8A2BE2" stroke-width="1.2"/>
+        <polygon points="46,196 26,220 16,216 36,192" fill="#160829" stroke="#8A2BE2" stroke-width="1.2"/>
+        <circle cx="20" cy="220" r="5" fill="#00ffff" filter="url(#neonGlowCyan)"/>
+        <rect x="16" y="220" width="10" height="4" rx="2" fill="#ffffff"/>
+      </g>
+    </g>
+
+    <!-- Floating Holographic Badge Above Robot Head -->
+    <g transform="translate(450, 14)">
+      <rect x="0" y="0" width="300" height="28" rx="14" fill="#0d0221" stroke="url(#cyanGlowGrad)" stroke-width="1.2" filter="url(#neonGlowPurple)" opacity="0.3"/>
+      <rect x="0" y="0" width="300" height="28" rx="14" fill="#0d0221" stroke="url(#cyanGlowGrad)" stroke-width="1.2"/>
+      <circle cx="20" cy="14" r="4" fill="#00ffff" filter="url(#neonGlowCyan)"/>
+      <text x="156" y="18" text-anchor="middle" class="ui-font" font-size="11" font-weight="bold" fill="#ffffff" letter-spacing="1.5">
+        ⚡ FULL-STACK ARCHITECT &amp; SDE ⚡
+      </text>
+    </g>
+
+  </g>
+
+  <!-- Bottom Accent Border -->
+  <line x1="0" y1="319" x2="1200" y2="319" stroke="#8A2BE2" stroke-width="1.5" opacity="0.6" filter="url(#neonGlowPurple)"/>
 </svg>

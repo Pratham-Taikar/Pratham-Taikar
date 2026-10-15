@@ -12,9 +12,9 @@
 
 ---
 
-<!-- Sneaking Robot Banner -->
+<!-- Cyber Developer Robot Banner -->
 <div align="center">
-  <img src="assets/robot-tron.svg" width="100%" />
+  <img src="assets/robot-cyber.svg" width="100%" />
 </div>
 
 <!-- About Me Section -->
@@ -117,22 +117,17 @@ Contact    : prathamtaikar26@gmail.com
 ---
 
 <!-- GitHub Stats -->
-## <img src="https://user-images.githubusercontent.com/74038190/216121986-1c9f3b0e-d083-4abc-b456-af4df10dd448.png" width="30" /> GitHub Stats
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Bar%20Chart.png" width="30" /> GitHub Stats
 
 <div align="center">
 
-<img width="49%" src="https://github-readme-stats.vercel.app/api?username=Pratham-Taikar&show_icons=true&theme=midnight-purple&hide_border=true&include_all_commits=true" />
-<img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=Pratham-Taikar&theme=midnight-purple&hide_border=true" />
+<img width="49%" src="https://github-readme-stats.vercel.app/api?username=Pratham-Taikar&show_icons=true&theme=midnight-purple&hide_border=true" />
+<img width="49%" src="https://streak-stats.demolab.com/?user=Pratham-Taikar&theme=midnight-purple&hide_border=true" />
 
-<img width="40%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Pratham-Taikar&layout=compact&theme=midnight-purple&hide_border=true&langs_count=8" />
+<br/><br/>
 
-</div>
-
-<!-- Activity Graph -->
-### 📈 Contribution Graph
-<div align="center">
-
-[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=Pratham-Taikar&bg_color=0d1117&color=9b59b6&line=8a2be2&point=ffffff&area=true&hide_border=true)](https://github.com/Pratham-Taikar)
+<img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Pratham-Taikar&layout=compact&theme=midnight-purple&hide_border=true&langs_count=8" />
+<img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Pratham-Taikar&theme=midnight_purple" />
 
 </div>
 
@@ -140,7 +135,18 @@ Contact    : prathamtaikar26@gmail.com
 ### 🐍 Contribution Snake
 <div align="center">
 
-![Snake animation](https://github.com/Pratham-Taikar/Pratham-Taikar/blob/output/github-contribution-grid-snake-dark.svg)
+<img src="https://raw.githubusercontent.com/Pratham-Taikar/Pratham-Taikar/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" width="100%" />
+
+</div>
+
+---
+
+<!-- LeetCode Stats -->
+## <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" width="30" /> LeetCode Stats
+
+<div align="center">
+
+[![LeetCode Stats](https://leetcard.jacoblin.cool/frustratedOutcast?theme=unicorn&font=Courier%20Prime&ext=contest)](https://leetcode.com/u/frustratedOutcast/)
 
 </div>
 
