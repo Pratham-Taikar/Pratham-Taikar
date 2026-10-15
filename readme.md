@@ -4,10 +4,6 @@
 <img src="assets/header.svg" width="100%" />
 <!-- ═══════════════════════════════════════════════════════════════════════════ -->
 
-<!-- Profile Views Badge -->
-<img src="https://komarev.com/ghpvc/?username=Pratham-Taikar&label=Profile%20Views&color=blueviolet&style=for-the-badge" alt="Profile Views" />
-<img src="https://img.shields.io/github/followers/Pratham-Taikar?label=Followers&style=for-the-badge&color=blueviolet" />
-
 </div>
 
 ---
