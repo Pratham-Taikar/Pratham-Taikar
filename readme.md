@@ -32,12 +32,12 @@ Interests  : Web Dev | System Design | DSA
 Contact    : prathamtaikar26@gmail.com
 ```
 
-- 🔭 Currently exploring full-stack web development and scalable web applications.
-- 🌱 Leveling up in **Next.js**, **TypeScript**, and backend architecture.
-- 💡 Passionate about clean code, problem-solving, and sharing technical insights.
-- 🏆 Active on **LeetCode** and **GeeksForGeeks**.
-- 💬 Ask me about **Full Stack Dev**, **React**, **Node.js** & **C++**.
-- ⚡ Fun fact: I debug with `console.log` and I'm proud of it 😄
+- Currently exploring full-stack web development and scalable web applications.
+- Leveling up in **Next.js**, **TypeScript**, and backend architecture.
+- Passionate about clean code, problem-solving, and sharing technical insights.
+- Active on **LeetCode** and **GeeksForGeeks**.
+- Ask me about **Full Stack Dev**, **React**, **Node.js** & **C++**.
+- Fun fact: I debug with `console.log` and I'm proud of it 😄
 
 <br clear="right"/>
 
@@ -62,6 +62,7 @@ Contact    : prathamtaikar26@gmail.com
 ## <img src="https://user-images.githubusercontent.com/74038190/212257467-871d32b7-e401-42e8-a166-fcfd7baa4c6b.gif" width="30" /> Tech Stack & Skills
 
 ### 🖥️ Languages
+
 <div align="center">
 
 ![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
@@ -73,6 +74,7 @@ Contact    : prathamtaikar26@gmail.com
 </div>
 
 ### ⚛️ Frontend
+
 <div align="center">
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
@@ -85,6 +87,7 @@ Contact    : prathamtaikar26@gmail.com
 </div>
 
 ### 🔧 Backend
+
 <div align="center">
 
 ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
@@ -94,6 +97,7 @@ Contact    : prathamtaikar26@gmail.com
 </div>
 
 ### 🗄️ Databases
+
 <div align="center">
 
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
@@ -104,6 +108,7 @@ Contact    : prathamtaikar26@gmail.com
 </div>
 
 ### 🛠️ Tools & Platforms
+
 <div align="center">
 
 ![Git](https://img.shields.io/badge/Git-F05033?style=for-the-badge&logo=git&logoColor=white)
@@ -111,6 +116,17 @@ Contact    : prathamtaikar26@gmail.com
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
 ![Cloudinary](https://img.shields.io/badge/Cloudinary-3448C5?style=for-the-badge&logo=cloudinary&logoColor=white)
 ![Clerk](https://img.shields.io/badge/Clerk-6C47FF?style=for-the-badge&logo=clerk&logoColor=white)
+
+</div>
+
+---
+
+<!-- LeetCode Stats -->
+## <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" width="30" /> LeetCode Stats
+
+<div align="center">
+
+[![LeetCode Stats](https://leetcard.jacoblin.cool/frustratedOutcast?theme=unicorn&font=Courier%20Prime&ext=contest)](https://leetcode.com/u/frustratedOutcast/)
 
 </div>
 
@@ -133,6 +149,7 @@ Contact    : prathamtaikar26@gmail.com
 
 <!-- Snake Animation -->
 ### 🐍 Contribution Snake
+
 <div align="center">
 
 <img src="https://raw.githubusercontent.com/Pratham-Taikar/Pratham-Taikar/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" width="100%" />
@@ -141,24 +158,7 @@ Contact    : prathamtaikar26@gmail.com
 
 ---
 
-<!-- LeetCode Stats -->
-## <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" width="30" /> LeetCode Stats
-
-<div align="center">
-
-[![LeetCode Stats](https://leetcard.jacoblin.cool/frustratedOutcast?theme=unicorn&font=Courier%20Prime&ext=contest)](https://leetcode.com/u/frustratedOutcast/)
-
-</div>
-
----
-
-
-
-<div align="center">
-
 <!-- ═══════════════════════════════ FOOTER SVG ═══════════════════════════════ -->
 <img src="assets/footer.svg" width="100%" />
 
-
 </div>
-
